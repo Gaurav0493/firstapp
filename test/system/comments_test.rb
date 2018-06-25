@@ -14,7 +14,9 @@ class CommentsTest < ApplicationSystemTestCase
     visit comments_url
     click_on "New Comment"
 
-    fill_in "Description", with: @comment.description
+    fill_in "Description", with: @comment.Description
+    fill_in "Name", with: @comment.Name
+    fill_in "Post", with: @comment.post_id
     fill_in "Text", with: @comment.text
     click_on "Create Comment"
 
@@ -26,7 +28,9 @@ class CommentsTest < ApplicationSystemTestCase
     visit comments_url
     click_on "Edit", match: :first
 
-    fill_in "Description", with: @comment.description
+    fill_in "Description", with: @comment.Description
+    fill_in "Name", with: @comment.Name
+    fill_in "Post", with: @comment.post_id
     fill_in "Text", with: @comment.text
     click_on "Update Comment"
 

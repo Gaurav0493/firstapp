@@ -1,9 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  description: MyString
+  Name: MyString
+  Description: MyString
   text: MyString
+  post: one
 
 two:
-  description: MyString
+  Name: MyString
+  Description: MyString
   text: MyString
+  post: two
