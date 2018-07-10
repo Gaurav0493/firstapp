@@ -1,37 +1,21 @@
-<%= form_with(model: comment, local: true) do |form| %>
-  <% if comment.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+<%= form_for([@post,@post.comments.build]) do |f| %>
 
-      <ul>
-      <% comment.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
 
   <div class="field">
-    <%= form.label :Name %>
-    <%= form.text_field :Name %>
+    <%= f.label :Name %>
+    <%= f.text_field :Name %>
   </div>
 
   <div class="field">
-    <%= form.label :Description %>
-    <%= form.text_field :Description %>
+    <%= f.label :Description %>
+    <%= f.text_area :Description %>
   </div>
 
   <div class="field">
-    <%= form.label :text %>
-    <%= form.text_field :text %>
-  </div>
-
-  <div class="field">
-    <%= form.label :post_id %>
-    <%= form.text_field :post_id %>
+    <%= f.label :post_id %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= f.submit 'Add Comment' %>
   </div>
 <% end %>

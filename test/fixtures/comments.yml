@@ -2,12 +2,10 @@
 
 one:
   Name: MyString
-  Description: MyString
-  text: MyString
+  Description: MyText
   post: one
 
 two:
   Name: MyString
-  Description: MyString
-  text: MyString
+  Description: MyText
   post: two
